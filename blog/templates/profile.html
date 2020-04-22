@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<section class="pager-sec bfr">
+          <div class="container">
+              <div class="pager-sec-details">
+                  <h3>Agent Profile</h3>
+                  <ul>
+                      <li><a href="#" title="">Home</a></li>
+                      <li><span>Agent Profile</span></li>
+                  </ul>
+              </div><!--pager-sec-details end-->
+          </div>
+      </section>
+
+      <section class="page-main-content section-padding">
+          <div class="container">
+              <div class="agent-profile-sec">
+                {% for user in user_details %}
+                  <div class="row">
+                      <div class="col-xl-8 col-lg-9 col-md-12 pl-0 pr-0">
+                          <div class="agent-profile">
+                              <div class="agent-img">
+                                  <img src="https://via.placeholder.com/355x407" alt="">
+                              </div><!--agent-img end-->
+                              <div class="agent-info">
+                                  <h3>{{user.user}}</h3>
+                                  <h4>Realtor</h4>
+
+                                  <p>All the details provided are true to my knowlwdge.
+                                  Great experience in this field.</p>
+                                  <ul class="cont-links">
+                                      <li><span><i class="la la-phone"></i>+1 212-925-3797</span></li>
+                                      <li><a href="mailto:example@example.com" title=""><i class="la la-envelope"></i>tomas@contact.com</a></li>
+                                  </ul>
+                                  <ul class="socio-links">
+                                      <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
+                                      <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
+                                      <li><a href="#" title=""><i class="fa fa-instagram"></i></a></li>
+                                      <li><a href="#" title=""><i class="fa fa-linkedin"></i></a></li>
+                                  </ul>
+
+                              </div><!--agent-info end-->
+                              {% if user_details.user %}
+                                <a href="{% url 'blog:profile' %}" class="btn btn-default">Edit</a>
+                              {% endif %}
+                          </div><!--agent-profile end-->
+                      </div>
+
+                      <div class="col-xl-4 col-lg-3 col-md-12 pr-0">
+                        {% if property_listings.owner == user %}
+                          <div class="contact-agent">
+                              <h3>Contact Agent</h3>
+                              <form>
+                                  <div class="form-field">
+                                      <input type="text" name="name" placeholder="Your Name">
+                                  </div><!--form-field end-->
+                                  <div class="form-field">
+                                      <input type="text" name="emal" placeholder="Your Email">
+                                  </div><!--form-field end-->
+                                  <div class="form-field">
+                                      <input type="text" name="phone" placeholder="Your Phone">
+                                  </div><!--form-field end-->
+                                  <div class="form-field">
+                                      <textarea name="message" placeholder="Your Message"></textarea>
+                                  </div><!--form-field end-->
+                                  <div class="form-field">
+                                      <button type="submit" class="btn2">Contact</button>
+                                  </div><!--form-field end-->
+                              </form>
+                          </div><!--contact-agent end-->
+                          {% endif %}
+                      </div>
+
+                  </div>
+                {% endfor %}
+              </div><!--agent-profile-sec end-->
+          </div>
+      </section><!--page-main-content end-->
+
+{% endblock %}
