@@ -1,4 +1,4 @@
-# reals
+# Reals
 Real Estate Website
 
 Tools & Technologies: Django, PostgreSQL, HTML, CSS, Bootstrap, Materialize, PayPal.
