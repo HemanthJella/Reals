@@ -40,7 +40,7 @@ sklearn==0.0
 sqlparse==0.3.0
 tinycss2==1.0.2
 typed-ast==1.4.0
-urllib3==1.25.7
+urllib3==1.26.5
 WeasyPrint==50
 webencodings==0.5.1
 wrapt==1.11.2
