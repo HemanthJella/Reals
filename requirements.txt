@@ -9,7 +9,7 @@ colorama==0.4.1
 cryptography==2.7
 cssselect2==0.2.2
 defusedxml==0.6.0
-Django==2.2.6
+Django==2.2.21
 django-easy-pdf==0.2.0.dev1
 django-pandas==0.6.1
 django-paypal==1.0.0
